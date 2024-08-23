@@ -40,6 +40,7 @@ en:
       view_post_in_store: View post in store
       view_posts_in_blog: View posts in blog
       visible: Visible
+      all_blogs: All Blogs
     frontend:
       ago: ago
       home: Home

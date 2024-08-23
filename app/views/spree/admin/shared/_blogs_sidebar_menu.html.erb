@@ -1,9 +1,11 @@
 <% if can? :admin, Spree::Blog %>
-   <ul class="nav nav-sidebar border-bottom" id="sidebarBlog">
-    <% if defined?(SpreePages) %>
-      <%= main_menu_tree I18n.t('spree_blogs.admin.static_content'), icon: "pages.svg", sub_menu: "blogs", url: "#sidebar-blogs" %>
-    <% else %>
-      <%= main_menu_tree I18n.t('spree_blogs.admin.blogs'), icon: "blogs.svg", sub_menu: "blogs", url: "#sidebar-blogs" %>
-    <% end %>
-   </ul>
- <% end %>
+  <ul class="nav nav-sidebar" id="sidebarBLOGS">
+    <li class="sidebar-menu-item d-block w-100 text-muted">
+      <%= main_menu_item(Spree.t(:blogs), url: "#sidebar-blogs", icon: 'pencil') %>
+      <ul id="sidebar-blogs" class="collapse nav nav-pills nav-stacked pb-2" data-hook="admin_blogs">
+        <%= tab(I18n.t('spree_blogs.admin.all_blogs'), url: spree.admin_blogs_path, match_path: admin_blogs_path, icon: 'list') %>
+        <%= tab(I18n.t('spree_blogs.admin.new_blog'), url: spree.new_admin_blog_path, match_path: new_admin_blog_path, icon: 'plus') %>
+      </ul>
+    </li>
+  </ul>
+<% end %>
