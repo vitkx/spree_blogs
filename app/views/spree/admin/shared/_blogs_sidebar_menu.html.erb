@@ -3,7 +3,8 @@
     <li class="sidebar-menu-item d-block w-100 text-muted">
       <%= main_menu_item(Spree.t(:blogs), url: "#sidebar-blogs", icon: 'pencil') %>
       <ul id="sidebar-blogs" class="collapse nav nav-pills nav-stacked pl-4 pb-2" data-hook="admin_blogs">
-        <%= tab(I18n.t('spree_blogs.admin.all_blogs'), url: spree.admin_blogs_path, match_path: admin_blogs_path, icon: 'list') %>
+        <%= tab(I18n.t('spree_blogs.admin.all_blogs'), url: spree.admin_blogs_path, match_path: spree.admin_blogs_path, icon: 'list') %>
+        <%= tab(I18n.t('spree_blogs.admin.all_posts'), url: spree.new_admin_posts_path, match_path: spree.new_admin_posts_path, icon: 'plus') %>
         <%= tab(I18n.t('spree_blogs.admin.new_blog'), url: spree.new_admin_blog_path, match_path: new_admin_blog_path, icon: 'plus') %>
       </ul>
     </li>
