@@ -41,6 +41,7 @@ en:
       view_posts_in_blog: View posts in blog
       visible: Visible
       all_blogs: All Blogs
+      all_posts: All Posts
     frontend:
       ago: ago
       home: Home
